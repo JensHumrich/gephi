@@ -20,6 +20,7 @@
         <gephi.mysql.version>8.0.13</gephi.mysql.version>
         <gephi.postgresql.version>42.2.5</gephi.postgresql.version>
         <gephi.sqlserver.version>6.2.2.jre8</gephi.sqlserver.version>
+        <gephi.teradata.version>16.20.00.12</gephi.teradata.version>
     </properties>
 
     <dependencies>
@@ -48,6 +49,14 @@
                     <artifactId>azure-keyvault</artifactId>
                 </exclusion>
             </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>com.teradata.jdbc</groupId>
+            <artifactId>TeraDriver</artifactId>
+            <version>${gephi.teradata.version}</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/src/main/resources/terajdbc4.jar</systemPath>
+            <type>jar</type>
         </dependency>
         <dependency>
             <groupId>org.netbeans.api</groupId>
